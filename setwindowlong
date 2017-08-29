@@ -1,3 +1,7 @@
 If you want to dynamically change a window's style to one that does not support visible taskbar buttons, 
 you must hide the window first (by calling ShowWindow with SW_HIDE),
 change the window style, and then show the window.
+
+调用SetWindowLong前需要HideWindow，之后需要使用SetWindowPos SWP_NOMOVE|SWP_NOSIZE|SWP_FRAMECHANGED|SWP_NOOWNERZORDER|SWP_NOACTIVATE
+
+同时需要注意显示窗口需要如下操作：SWP_NOSIZE | SWP_NOMOVE | SWP_NOACTIVATE | SWP_NOZORDER | （SWP_SHOWWINDOW ？SWP_HIDEWINDOW))
