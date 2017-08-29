@@ -1,0 +1,3 @@
+If you want to dynamically change a window's style to one that does not support visible taskbar buttons, 
+you must hide the window first (by calling ShowWindow with SW_HIDE),
+change the window style, and then show the window.
